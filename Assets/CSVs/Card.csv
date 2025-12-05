@@ -1,0 +1,76 @@
+﻿CardID,NameKR,Element,Rarity,Cost,ActiveType1,ActiveValue1,ActiveType2,ActiveValue2,AttackCount,PassiveType,PassiveValue,Trigger
+Cardcode_001,부싯깃,Fire,Normal,3,DealDamage,0.8,InflictSE,2,1,IncreaseAttack,5,Continuous
+Cardcode_002,플레어,Fire,Normal,2,AddReroll,1,None,0,1,RecovoerMana,1,Continuous
+Cardcode_003,랜턴 투척,Fire,Normal,2,HealMiasma,20,None,0,1,IncreaseAttack,15,TurnEnd
+Cardcode_004,히트업,Fire,Normal,4,DealDamage,0.9,InflictSE,2,1,RecovoerMana,1,Continuous
+Cardcode_005,화산재,Fire,Normal,3,AddReroll,1,InflictSE,2,1,IncreaseAttack,5,Continuous
+Cardcode_006,백린탄,Fire,Normal,4,DealDamage,1,InflictSE,3,1,InflictSE,3,TurnEnd
+Cardcode_007,인체발화,Fire,Normal,3,HealMiasma,30,None,0,1,RecovoerMana,1,Continuous
+Cardcode_008,폭열파,Fire,Rare,4,DealDamage,1,InflictSE,4,1,IncreaseAttack,10,Continuous
+Cardcode_009,작열참,Fire,Rare,4,AddReroll,2,InflictSE,2,1,RecovoerMana,1,Continuous
+Cardcode_010,분노의 응징,Fire,Rare,3,HealMiasma,40,None,0,1,IncreaseAttack,25,TurnEnd
+Cardcode_011,인페르노,Fire,Rare,5,DealDamage,0.8,InflictSE,2,2,InflictSE,2,TurnEnd
+Cardcode_012,아케인 블레이즈,Fire,Hero,5,DealDamage,1,InflictSE,3,2,IncreaseAttack,15,Continuous
+Cardcode_013,연소하는 검 아그니,Fire,Hero,5,AddReroll,3,InflictSE,2,1,RecovoerMana,2,Continuous
+Cardcode_014,심판,Fire,Hero,4,HealMiasma,80,None,0,1,InflictSE,3,Continuous
+Cardcode_015,홍염룡,Fire,Legend,7,DealDamage,2,InflictSE,5,2,IncreaseAttack,20,Continuous
+Cardcode_016,동상,Ice,Normal,3,DealDamage,0.7,InflictSE,3,1,IncreaseAttack,5,Continuous
+Cardcode_017,냉동주먹,Ice,Normal,3,DealDamage,0.4,InflictSE,3,2,InflictSE,3,TurnEnd
+Cardcode_018,얼음가시,Ice,Normal,2,AddReroll,1,None,0,1,IncreaseAttack,5,Continuous
+Cardcode_019,오한,Ice,Normal,2,HealMiasma,20,None,0,1,IncreaseAttack,15,TurnEnd
+Cardcode_020,얼음장벽,Ice,Normal,4,DealDamage,0.8,InflictSE,3,1,IncreaseAttack,5,Continuous
+Cardcode_021,얼음단도,Ice,Normal,2,RecovoerMana,4,None,0,1,IncreaseAttack,5,TurnEnd
+Cardcode_022,과냉각수,Ice,Normal,4,AddReroll,2,InflictSE,2,1,InflictSE,1,Continuous
+Cardcode_023,얼음화살,Ice,Rare,4,DealDamage,0.9,InflictSE,4,1,IncreaseAttack,25,TurnEnd
+Cardcode_024,얼음창 피셔,Ice,Rare,4,RecovoerMana,8,None,0,1,IncreaseAttack,10,Continuous
+Cardcode_025,빙무,Ice,Rare,5,DealDamage,1,InflictSE,5,1,InflictSE,2,Continuous
+Cardcode_026,파쇄,Ice,Rare,4,HealMiasma,40,None,0,1,IncreaseAttack,25,TurnEnd
+Cardcode_027,아이스 스톰,Ice,Hero,5,DealDamage,1,InflictSE,4,2,IncreaseAttack,15,Continuous
+Cardcode_028,얼리는검 야샤,Ice,Hero,1,RecovoerMana,5,None,0,1,InflictSE,2,Continuous
+Cardcode_029,급속냉동,Ice,Hero,3,AddReroll,3,None,2,1,IncreaseAttack,15,Continuous
+Cardcode_030,영구동토,Ice,Legend,7,DealDamage,1,InflictSE,4,3,IncreaseAttack,45,TurnEnd
+Cardcode_031,라이트닝 볼트,Lightning,Normal,1,InflictSE,20,DealDamage,0.5,2,IncreaseAttack,5,Continuous
+Cardcode_032,컨버젼,Lightning,Normal,1,InflictSE,30,DealDamage,0.6,1,InflictSE,30,TurnEnd
+Cardcode_033,스파크 샷,Lightning,Normal,2,AddReroll,1,None,0,1,IncreaseAttack,5,Continuous
+Cardcode_034,축전,Lightning,Normal,2,HealMiasma,20,None,0,1,IncreaseAttack,15,TurnEnd
+Cardcode_035,과충전,Lightning,Normal,2,InflictSE,30,DealDamage,0.6,3,IncreaseAttack,5,Continuous
+Cardcode_036,전자기력,Lightning,Normal,2,RecovoerMana,4,None,0,1,IncreaseAttack,15,TurnEnd
+Cardcode_037,임펄스,Lightning,Normal,3,AddReroll,2,InflictSE,10,1,InflictSE,10,Continuous
+Cardcode_038,썬더 볼,Lightning,Rare,2,InflictSE,30,DealDamage,0.5,2,IncreaseAttack,25,TurnEnd
+Cardcode_039,낙뢰부름,Lightning,Rare,1,RecovoerMana,4,None,0,1,IncreaseAttack,10,Continuous
+Cardcode_040,제세동,Lightning,Rare,2,InflictSE,40,DealDamage,0.7,1,InflictSE,20,Continuous
+Cardcode_041,뇌전의 영역,Lightning,Rare,3,HealMiasma,30,InflictSE,10,1,IncreaseAttack,25,TurnEnd
+Cardcode_042,오버클럭,Lightning,Hero,3,InflictSE,50,DealDamage,0.6,2,IncreaseAttack,15,Continuous
+Cardcode_043,썬더 인퓨전,Lightning,Hero,3,RecovoerMana,6,InflictSE,10,1,InflictSE,50,TurnEnd
+Cardcode_044,천뢰벽력,Lightning,Hero,3,AddReroll,3,InflictSE,10,1,IncreaseAttack,15,Continuous
+Cardcode_045,뇌봉전별,Lightning,Legend,7,InflictSE,50,DealDamage,1,4,InflictSE,30,Continuous
+Cardcode_046,개척,Grass,Normal,2,DealDamage,0.6,InflictSE,3,2,IncreaseAttack,5,Continuous
+Cardcode_047,풀피리,Grass,Normal,2,DealDamage,0.8,InflictSE,5,1,InflictSE,10,TurnEnd
+Cardcode_048,메마름,Grass,Normal,2,AddReroll,1,None,0,1,IncreaseAttack,5,Continuous
+Cardcode_049,분진,Grass,Normal,2,HealMiasma,20,None,0,1,IncreaseAttack,15,TurnEnd
+Cardcode_050,독수,Grass,Normal,3,DealDamage,0.6,InflictSE,2,3,IncreaseAttack,5,Continuous
+Cardcode_051,발아,Grass,Normal,2,RecovoerMana,4,None,0,1,IncreaseAttack,15,TurnEnd
+Cardcode_052,가시덩쿨,Grass,Normal,3,AddReroll,2,InflictSE,1,1,InflictSE,2,Continuous
+Cardcode_053,청산,Grass,Rare,3,DealDamage,0.7,InflictSE,2,2,IncreaseAttack,25,TurnEnd
+Cardcode_054,호흡마비,Grass,Rare,1,RecovoerMana,3,InflictSE,1,1,IncreaseAttack,10,Continuous
+Cardcode_055,응급처치,Grass,Rare,3,DealDamage,0.8,InflictSE,2,1,InflictSE,2,Continuous
+Cardcode_056,명상,Grass,Rare,3,HealMiasma,30,None,0,1,IncreaseAttack,25,TurnEnd
+Cardcode_057,초목의 검,Grass,Hero,4,DealDamage,1.2,InflictSE,4,1,IncreaseAttack,15,Continuous
+Cardcode_058,관통뿌리,Grass,Hero,4,RecovoerMana,8,InflictSE,2,1,InflictSE,15,TurnEnd
+Cardcode_059,태초의 나무,Grass,Hero,3,AddReroll,3,InflictSE,5,1,IncreaseAttack,15,Continuous
+Cardcode_060,황금사과,Grass,Legend,7,DealDamage,2,InflictSE,5,2,InflictSE,20,TurnEnd
+Cardcode_061,기교,None,Normal,1,DealDamage,0.8,None,0,2,IncreaseAttack,5,Continuous
+Cardcode_062,재주,None,Normal,1,DealDamage,1,None,0,1,IncreaseAttack,15,TurnEnd
+Cardcode_063,임시방편,None,Normal,1,AddReroll,1,None,0,1,IncreaseAttack,5,Continuous
+Cardcode_064,샘물,None,Normal,2,HealMiasma,20,None,0,1,IncreaseAttack,15,TurnEnd
+Cardcode_065,가속,None,Normal,2,DealDamage,1.2,None,0,1,IncreaseAttack,5,Continuous
+Cardcode_066,보충제,None,Normal,1,RecovoerMana,2,None,0,1,IncreaseAttack,15,TurnEnd
+Cardcode_067,돌파,None,Normal,2,AddReroll,2,None,0,1,IncreaseAttack,5,Continuous
+Cardcode_068,암습,None,Rare,3,DealDamage,1,None,0,2,IncreaseAttack,15,TurnEnd
+Cardcode_069,마법의 약,None,Rare,2,RecovoerMana,4,None,0,1,IncreaseAttack,10,Continuous
+Cardcode_070,활력,None,Rare,4,DealDamage,1.6,None,0,1,IncreaseAttack,10,Continuous
+Cardcode_071,세컨드 찬스,None,Rare,3,HealMiasma,30,None,0,1,IncreaseAttack,25,TurnEnd
+Cardcode_072,힘의 물약,None,Hero,5,DealDamage,2,None,0,2,IncreaseAttack,15,Continuous
+Cardcode_073,무모함,None,Hero,3,RecovoerMana,6,None,0,1,IncreaseAttack,35,TurnEnd
+Cardcode_074,커튼콜,None,Hero,3,AddReroll,3,None,0,1,IncreaseAttack,15,Continuous
+Cardcode_075,현자의 돌,None,Legend,7,DealDamage,3,None,0,2,IncreaseAttack,45,TurnEnd

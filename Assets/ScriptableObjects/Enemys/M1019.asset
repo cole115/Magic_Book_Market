@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c7cdf68d95d6794ebde04221ad63169, type: 3}
+  m_Name: M1019
+  m_EditorClassIdentifier: 
+  MonsterID: M1019
+  MonsterName: BossAllRounder
+  Hp: 6000
+  Atk: 100
+  Def: 40
+  StageList:
+  - S1021
+  GetGold: 0

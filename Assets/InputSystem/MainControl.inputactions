@@ -1,0 +1,80 @@
+{
+    "name": "MainControl",
+    "maps": [
+        {
+            "name": "Control",
+            "id": "b211cb62-188b-44e2-9ac5-b37e4e40f2fa",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "cb119d66-ba3e-49ab-8ab6-6c58776c6805",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Point",
+                    "type": "Value",
+                    "id": "b3b3b236-14fb-4345-9b53-0ad93930b66f",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Drag",
+                    "type": "PassThrough",
+                    "id": "990da0cc-adcd-42c0-90ab-914cfc245d9a",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8a397144-d182-496d-acc3-f08cd06d1806",
+                    "path": "<Pointer>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";PC & Mobile",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "67c71ff1-0de2-4a2b-9ecb-2e5e600209f2",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7f6607c8-4155-4d80-b31e-f75392fe5e84",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Drag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "PC & Mobile",
+            "bindingGroup": "PC & Mobile",
+            "devices": []
+        }
+    ]
+}
