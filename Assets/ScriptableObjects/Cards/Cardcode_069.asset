@@ -21,11 +21,11 @@ MonoBehaviour:
     UprEffectInfos:
     - Type: 6
       Value: 4
-    UprDescription: 
+    UprDescription: "\uB9C8\uB098\uB97C 4 \uD68C\uBCF5\uD569\uB2C8\uB2E4"
     AttackCount: 1
     Trigger: 0
     RevEffectInfos:
     - Type: 1
       Value: 10
-    RevDescription: 
+    RevDescription: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4"
   CardSprite: {fileID: 0}

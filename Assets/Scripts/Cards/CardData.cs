@@ -79,14 +79,6 @@ public class GameCard
             CardFace.Reversed :
             CardFace.Upright;
     }
-    public string ShowDescription()
-    {
-        return CardFace == CardFace.Upright ?
-            Card.Effects.UprDescription :
-            Card.Effects.RevDescription;
-    }
-
-
     //// 업그레이드는 현재는 사용안함
     //public void UpgradeCard()
     //{

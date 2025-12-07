@@ -23,11 +23,12 @@ MonoBehaviour:
       Value: 50
     - Type: 0
       Value: 1
-    UprDescription: 
+    UprDescription: "\uAC10\uC804 50\uC2A4\uD0DD\uC744 \uBD80\uC5EC\uD558\uACE0,
+      \uACF5\uACA9\uB825\uC758 100% \uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4"
     AttackCount: 4
     Trigger: 0
     RevEffectInfos:
     - Type: 2
       Value: 30
-    RevDescription: 
+    RevDescription: "\uAC10\uC804 30\uC2A4\uD0DD\uC744 \uBD80\uC5EC\uD569\uB2C8\uB2E4"
   CardSprite: {fileID: 21300000, guid: 2834f5b521c65a2488d2f65367af4678, type: 3}

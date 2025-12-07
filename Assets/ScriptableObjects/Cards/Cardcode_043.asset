@@ -23,11 +23,12 @@ MonoBehaviour:
       Value: 6
     - Type: 2
       Value: 10
-    UprDescription: 
+    UprDescription: "\uB9C8\uB098\uB97C 6 \uD68C\uBCF5\uD558\uACE0, \uAC10\uC804
+      10\uC2A4\uD0DD\uC744 \uBD80\uC5EC\uD569\uB2C8\uB2E4"
     AttackCount: 1
     Trigger: 1
     RevEffectInfos:
     - Type: 2
       Value: 50
-    RevDescription: 
+    RevDescription: "\uAC10\uC804 50\uC2A4\uD0DD\uC744 \uBD80\uC5EC\uD569\uB2C8\uB2E4"
   CardSprite: {fileID: 0}

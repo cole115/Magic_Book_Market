@@ -14,8 +14,6 @@ public class DragHandler : MonoBehaviour,
     private void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
-        if (parentCanvas == null)
-            parentCanvas = FindObjectOfType<Canvas>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)

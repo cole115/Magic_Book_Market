@@ -11,7 +11,7 @@ public class UI_CardExecuteArea : MonoBehaviour, IDropHandler
     [SerializeField] float moveDistance = 80f;      // 카드가 올라가는 거리
     [SerializeField] float fadeInDuration = 0.15f;  // 카드가 페이드 인 되는 시간
     [SerializeField] float riseDuration = 0.35f;    // 카드가 올라가는 시간
-    [SerializeField] float holdDurtaion = 0.6f; // 화면에 카드가 멈춘 채로 남는 시간
+    //[SerializeField] float holdDurtaion = 0.6f; // 화면에 카드가 멈춘 채로 남는 시간
     [SerializeField] float fadeOutDuration = 0.25f; // 카드가 페이드 아웃 되는 시간
     [SerializeField] float popScaleMultiplier = 1.25f; // 카드가 확대되는 크기
     [SerializeField] float popDuration = 0.18f; // 카드가 확대되는 시간
@@ -49,7 +49,7 @@ public class UI_CardExecuteArea : MonoBehaviour, IDropHandler
         var uiCard = eventData.pointerDrag?.GetComponent<UI_HandCard>();
         if (uiCard == null) return;
 
-        handSprite = uiCard.CardImage.sprite;
+        handSprite = uiCard.ImageUI.sprite;
 
 
         // 효과를 쓸 수 있는지 체크. 가능하다면 사용

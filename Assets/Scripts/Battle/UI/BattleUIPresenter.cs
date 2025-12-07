@@ -14,9 +14,11 @@ public class BattleUIPresenter : MonoBehaviour
 {
     [Header("Hand")]
     [SerializeField] UI_HandCard[] handCardsUI = new UI_HandCard[4];
+    UI_DescriptionOpener[] openers = new UI_DescriptionOpener[4];
 
     [Header("Canvas")]
     [SerializeField] UI_ResultCanvas resultCanvas;
+    [SerializeField] UI_DescriptionCanvas descriptionCanvas;
 
     [Header("Btn")]
     [SerializeField] UI_EndTurnBtn endTurnBtn;
@@ -59,6 +61,7 @@ public class BattleUIPresenter : MonoBehaviour
                 continue;
             }
             handCardsUI[i].Init(i, cardPlaceHolder);
+            
         }
 
         if (endTurnBtn != null)
@@ -210,7 +213,7 @@ public class BattleUIPresenter : MonoBehaviour
         var targetCard = handCardsUI[dir];
 
         StartCoroutine(enemyAttackResult.OnBreak(
-            targetCard.transform.position,targetCard.CardImage.sprite));
+            targetCard.transform.position,targetCard.ImageUI.sprite));
     }
 
     // 적 공격 결과 처리. 카드 파괴 시에는 ShowCardBreak 쪽으로
@@ -230,7 +233,7 @@ public class BattleUIPresenter : MonoBehaviour
 
 
 
-    // 나중에 로드 되기 전 디폴트 스프라이트 표시하기
+    // 카드 스프라이트 로드
     private async Task LoadCardSprite(GameCard c, UI_HandCard ui)
     {
         string cardID = c.Card.CardID;
@@ -243,7 +246,7 @@ public class BattleUIPresenter : MonoBehaviour
         }
         Sprite sprite = await CardDatabase.GetSprite(spriteCode);
         c.Card.CardSprite = sprite;
-        ui.ShowCard(sprite, c.CardFace);
+        ui.ShowCard(c);
     }
 
 

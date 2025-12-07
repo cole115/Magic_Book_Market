@@ -186,6 +186,9 @@ public class Editor_SOMaker
                 (RevEffectTrigger)Enum.Parse(typeof(RevEffectTrigger), csv.GetField<string>("Trigger"));
 
 
+                asset.Effects.UprDescription = csv.GetField<string>("Description_1");
+                asset.Effects.RevDescription = csv.GetField<string>("Description_2");
+
             }
             );
     }

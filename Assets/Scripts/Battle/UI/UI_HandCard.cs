@@ -8,10 +8,10 @@ using UnityEngine.UI;
 // 패의 카드의 ui를 관리할 클래스
 public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDragHandler
 {
+    private GameCard slotCard;
 
 
-
-    public Image CardImage{get;private set;}
+    public Image ImageUI{get;private set;}
 
     Sprite placeHolder;
     Transform canvas;
@@ -36,7 +36,7 @@ public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDr
 
     private void Awake()
     {
-        CardImage = GetComponent<Image>();
+        ImageUI = GetComponent<Image>();
 
         canvas = transform.root;
         rect = GetComponent<RectTransform>();
@@ -57,34 +57,38 @@ public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDr
     {
         if(placeHolder != null)
         {
-            CardImage.sprite = placeHolder;
+            ImageUI.sprite = placeHolder;
 
-            Color c = CardImage.color;
+            Color c = ImageUI.color;
             c.a = 0f;
-            CardImage.color = c;
+            ImageUI.color = c;
         }
         
     }
 
 
 
+    //public void ShowCard(Sprite sprite, CardFace face)
+
     // ui_cardview에서 스프라이트 가져오기
     // 카드 정보는 BattleUIPresenter가 갖고 있음
     // cardFace에 따라 canDrag와 카드 방향이 결정됨
-    public void ShowCard(Sprite sprite, CardFace face)
+    public void ShowCard(GameCard card)
     {
-        CardImage.enabled = true;
-        CardImage.sprite = sprite;
+        slotCard = card;
 
-        Color c= CardImage.color;
+        ImageUI.enabled = true;
+        ImageUI.sprite = card.Card.CardSprite;
+
+        Color c= ImageUI.color;
         c.a = 1f;
-        CardImage.color = c;
+        ImageUI.color = c;
 
 
         HandleDraggable(true);
-        
-        _cardFace = face;
-        UpdateCardFace(face);
+
+        _cardFace = card.CardFace;
+        UpdateCardFace(_cardFace);
     }
 
 
@@ -106,17 +110,15 @@ public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDr
     {
         ResetCardPos(); 
         HandleDraggable(false);
-        CardImage.sprite = placeHolder;
+        ImageUI.sprite = placeHolder;
         rect.localScale = Vector3.one;  
-        //image.enabled = false;
-        //gameObject.SetActive(false);
     }
 
     // 드래그 가능 여부
     public void HandleDraggable(bool isAble)
     {
         canDrag = isAble;
-        CardImage.raycastTarget = isAble;
+        ImageUI.raycastTarget = isAble;
     }
 
 
@@ -132,7 +134,7 @@ public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDr
         transform.SetParent(canvas);
         transform.SetAsLastSibling();
 
-        CardImage.raycastTarget = false;
+        ImageUI.raycastTarget = false;
 
     }
      
@@ -154,7 +156,7 @@ public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDr
             ResetCardPos();
         }
 
-        CardImage.raycastTarget = true;
+        ImageUI.raycastTarget = true;
     }
 
     #endregion
@@ -169,21 +171,6 @@ public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDr
     {
         return OnTryFlipCard?.Invoke(SlotIndex) ?? false;
     }
-
-    // 카드 발동 시 실행. 카드 사용 시 나오는 연출만.
-    //public IEnumerator ShowActivateCoroutine()
-    //{
-
-    //    //rect.localScale *= 2.0f;
-    //    HandleDraggable(false);
-    //    ResetCardPos();
-
-    //    yield return new WaitForSeconds(1.0f);
-
-        
-    //    EmptyCard();
-    //}
-
 
     // 패의 카드 뒤집을 시 실행
     // 카드 방향이 뒤집기 전에 이미 정해져 버리도록 만들어져 있으므로, 차라리 현재 방향을 참조해서 그 반대방향부터 시작하도록
