@@ -1,64 +1,103 @@
 ﻿CardID,NameKR,Element,Rarity,Cost,ActiveType1,ActiveValue1,ActiveType2,ActiveValue2,AttackCount,PassiveType,PassiveValue,Trigger,Description_1,Description_2
-Cardcode_001,부싯깃,Fire,Normal,3,DealDamage,0.8,InflictSE,2,1,IncreaseAttack,5,Continuous,"공격력의 80% 피해를 입히고, 화상 2스택을 부여합니다",공격력이 5 증가합니다
+Cardcode_001,부싯깃,Fire,Normal,3,DealDamage,0.8,InflictSE,2,1,IncreaseAttack,5,Continuous,"공격력의 80% 피해를 입히고, 
+화상 2스택을 부여합니다",공격력이 5 증가합니다
 Cardcode_002,플레어,Fire,Normal,2,AddReroll,1,None,0,1,RecovoerMana,1,Continuous,리롤을 1회 추가합니다,마나를 1 회복합니다
 Cardcode_003,랜턴 투척,Fire,Normal,2,HealMiasma,20,None,0,1,IncreaseAttack,15,TurnEnd,오염도를 20 정화합니다,공격력이 15 증가합니다
-Cardcode_004,히트업,Fire,Normal,4,DealDamage,0.9,InflictSE,2,1,RecovoerMana,1,Continuous,"공격력의 90% 피해를 입히고, 화상 2스택을 부여합니다",마나를 1 회복합니다
-Cardcode_005,화산재,Fire,Normal,3,AddReroll,1,InflictSE,2,1,IncreaseAttack,5,Continuous,"리롤을 1회 추가하고, 화상 2스택을 부여합니다",공격력이 5 증가합니다
-Cardcode_006,백린탄,Fire,Normal,4,DealDamage,1,InflictSE,3,1,InflictSE,3,TurnEnd,"공격력의 100% 피해를 입히고, 화상 3스택을 부여합니다",화상 3스택을 부여합니다
+Cardcode_004,히트업,Fire,Normal,4,DealDamage,0.9,InflictSE,2,1,RecovoerMana,1,Continuous,"공격력의 90% 피해를 입히고, 
+화상 2스택을 부여합니다",마나를 1 회복합니다
+Cardcode_005,화산재,Fire,Normal,3,AddReroll,1,InflictSE,2,1,IncreaseAttack,5,Continuous,"리롤을 1회 추가하고, \n화상 2스택을 부여합니다",공격력이 5 증가합니다
+Cardcode_006,백린탄,Fire,Normal,4,DealDamage,1,InflictSE,3,1,InflictSE,3,TurnEnd,"공격력의 100% 피해를 입히고, 
+화상 3스택을 부여합니다",화상 3스택을 부여합니다
 Cardcode_007,인체발화,Fire,Normal,3,HealMiasma,30,None,0,1,RecovoerMana,1,Continuous,오염도를 30 정화합니다,마나를 1 회복합니다
-Cardcode_008,폭열파,Fire,Rare,4,DealDamage,1,InflictSE,4,1,IncreaseAttack,10,Continuous,"공격력의 100% 피해를 입히고, 화상 4스택을 부여합니다",공격력이 10 증가합니다
-Cardcode_009,작열참,Fire,Rare,4,AddReroll,2,InflictSE,2,1,RecovoerMana,1,Continuous,"리롤을 2회 추가하고, 화상 2스택을 부여합니다",마나를 1 회복합니다
+Cardcode_008,폭열파,Fire,Rare,4,DealDamage,1,InflictSE,4,1,IncreaseAttack,10,Continuous,"공격력의 100% 피해를 입히고, 
+화상 4스택을 부여합니다",공격력이 10 증가합니다
+Cardcode_009,작열참,Fire,Rare,4,AddReroll,2,InflictSE,2,1,RecovoerMana,1,Continuous,"리롤을 2회 추가하고, 
+화상 2스택을 부여합니다",마나를 1 회복합니다
 Cardcode_010,분노의 응징,Fire,Rare,3,HealMiasma,40,None,0,1,IncreaseAttack,25,TurnEnd,오염도 40을 정화합니다,공격력이 25 증가합니다
-Cardcode_011,인페르노,Fire,Rare,5,DealDamage,0.8,InflictSE,2,2,InflictSE,2,TurnEnd,"공격력의 80% 피해를 입히고, 화상 2스택을 부여합니다",화상 2스택을 부여합니다
-Cardcode_012,아케인 블레이즈,Fire,Hero,5,DealDamage,1,InflictSE,3,2,IncreaseAttack,15,Continuous,"공격력의 100% 피해를 입히고, 화상 3스택을 부여합니다",공격력이 15 증가합니다
-Cardcode_013,연소하는 검 아그니,Fire,Hero,5,AddReroll,3,InflictSE,2,1,RecovoerMana,2,Continuous,"리롤을 3회 추가하고, 화상 2스택을 부여합니다",마나를 2 회복합니다
+Cardcode_011,인페르노,Fire,Rare,5,DealDamage,0.8,InflictSE,2,2,InflictSE,2,TurnEnd,"공격력의 80% 피해를 입히고, 
+화상 2스택을 부여합니다",화상 2스택을 부여합니다
+Cardcode_012,아케인 블레이즈,Fire,Hero,5,DealDamage,1,InflictSE,3,2,IncreaseAttack,15,Continuous,"공격력의 100% 피해를 입히고, 
+화상 3스택을 부여합니다",공격력이 15 증가합니다
+Cardcode_013,연소검 아그니,Fire,Hero,5,AddReroll,3,InflictSE,2,1,RecovoerMana,2,Continuous,"리롤을 3회 추가하고, 
+화상 2스택을 부여합니다",마나를 2 회복합니다
 Cardcode_014,심판,Fire,Hero,4,HealMiasma,80,None,0,1,InflictSE,3,Continuous,오염도를 80 정화합니다,화상 3스택을 부여합니다
-Cardcode_015,홍염룡,Fire,Legend,7,DealDamage,2,InflictSE,5,2,IncreaseAttack,20,Continuous,"공격력의 200% 피해를 입히고, 화상 5스택을 부여합니다",공격력이 20 증가합니다
-Cardcode_016,동상,Ice,Normal,3,DealDamage,0.7,InflictSE,3,1,IncreaseAttack,5,Continuous,"공격력의 70% 피해를 입히고, 빙결 3스택을 부여합니다",공격력이 5 증가합니다
-Cardcode_017,냉동주먹,Ice,Normal,3,DealDamage,0.4,InflictSE,3,2,InflictSE,3,TurnEnd,"공격력의 40% 피해를 입히고, 빙결 3스택을 부여합니다",빙결 3스택을 부여합니다
+Cardcode_015,홍염룡,Fire,Legend,7,DealDamage,2,InflictSE,5,2,IncreaseAttack,20,Continuous,"공격력의 200% 피해를 입히고, 
+화상 5스택을 부여합니다",공격력이 20 증가합니다
+Cardcode_016,동상,Ice,Normal,3,DealDamage,0.7,InflictSE,3,1,IncreaseAttack,5,Continuous,"공격력의 70% 피해를 입히고, 
+빙결 3스택을 부여합니다",공격력이 5 증가합니다
+Cardcode_017,냉동주먹,Ice,Normal,3,DealDamage,0.4,InflictSE,3,2,InflictSE,3,TurnEnd,"공격력의 40% 피해를 입히고, 
+빙결 3스택을 부여합니다",빙결 3스택을 부여합니다
 Cardcode_018,얼음가시,Ice,Normal,2,AddReroll,1,None,0,1,IncreaseAttack,5,Continuous,리롤을 1회 추가합니다,공격력이 5 증가합니다
 Cardcode_019,오한,Ice,Normal,2,HealMiasma,20,None,0,1,IncreaseAttack,15,TurnEnd,오염도를 20 정화합니다,공격력이 15 증가합니다
-Cardcode_020,얼음장벽,Ice,Normal,4,DealDamage,0.8,InflictSE,3,1,IncreaseAttack,5,Continuous,"공격력의 80% 피해를 입힙니다, 빙결 3스택을 부여합니다",공격력이 5 증가합니다
+Cardcode_020,얼음장벽,Ice,Normal,4,DealDamage,0.8,InflictSE,3,1,IncreaseAttack,5,Continuous,"공격력의 80% 피해를 입힙니다, 
+빙결 3스택을 부여합니다",공격력이 5 증가합니다
 Cardcode_021,얼음단도,Ice,Normal,2,RecovoerMana,4,None,0,1,IncreaseAttack,5,TurnEnd,마나를 4 회복합니다,공격력이 5 증가합니다
-Cardcode_022,과냉각수,Ice,Normal,4,AddReroll,2,InflictSE,2,1,InflictSE,1,Continuous,"리롤을 2회 추가하고, 빙결 2스택을 부여합니다",빙결 1스택을 부여합니다
-Cardcode_023,얼음화살,Ice,Rare,4,DealDamage,0.9,InflictSE,4,1,IncreaseAttack,25,TurnEnd,"공격력의 90% 피해를 입히고, 빙결 4스택을 부여합니다",공격력이 25 증가합니다
+Cardcode_022,과냉각수,Ice,Normal,4,AddReroll,2,InflictSE,2,1,InflictSE,1,Continuous,"리롤을 2회 추가하고, 
+빙결 2스택을 부여합니다",빙결 1스택을 부여합니다
+Cardcode_023,얼음화살,Ice,Rare,4,DealDamage,0.9,InflictSE,4,1,IncreaseAttack,25,TurnEnd,"공격력의 90% 피해를 입히고, 
+빙결 4스택을 부여합니다",공격력이 25 증가합니다
 Cardcode_024,얼음창 피셔,Ice,Rare,4,RecovoerMana,8,None,0,1,IncreaseAttack,10,Continuous,마나를 8 회복합니다,공격력이 10 증가합니다
-Cardcode_025,빙무,Ice,Rare,5,DealDamage,1,InflictSE,5,1,InflictSE,2,Continuous,"공격력의 100% 피해를 입히고, 빙결 5스택을 부여합니다",빙결 2스택을 부여합니다
+Cardcode_025,빙무,Ice,Rare,5,DealDamage,1,InflictSE,5,1,InflictSE,2,Continuous,"공격력의 100% 피해를 입히고, 
+빙결 5스택을 부여합니다",빙결 2스택을 부여합니다
 Cardcode_026,파쇄,Ice,Rare,4,HealMiasma,40,None,0,1,IncreaseAttack,25,TurnEnd,오염도를 40 정화합니다,공격력이 25 증가합니다
-Cardcode_027,아이스 스톰,Ice,Hero,5,DealDamage,1,InflictSE,4,2,IncreaseAttack,15,Continuous,"공격력의 100% 피해를 입히고, 빙결 4스택을 부여합니다",공격력이 15 증가합니다
-Cardcode_028,얼리는검 야샤,Ice,Hero,1,RecovoerMana,5,None,0,1,InflictSE,2,Continuous,마나를 5 회복합니다,빙결 2스택을 부여합니다
+Cardcode_027,아이스 스톰,Ice,Hero,5,DealDamage,1,InflictSE,4,2,IncreaseAttack,15,Continuous,"공격력의 100% 피해를 입히고, 
+빙결 4스택을 부여합니다",공격력이 15 증가합니다
+Cardcode_028,수호검 야샤,Ice,Hero,1,RecovoerMana,5,None,0,1,InflictSE,2,Continuous,마나를 5 회복합니다,빙결 2스택을 부여합니다
 Cardcode_029,급속냉동,Ice,Hero,3,AddReroll,3,None,0,1,IncreaseAttack,15,Continuous,리롤을 3회 추가합니다,공격력이 15 증가합니다
-Cardcode_030,영구동토,Ice,Legend,7,DealDamage,1,InflictSE,4,3,IncreaseAttack,45,TurnEnd,"공격력의 100% 피해를 입히고, 빙결 4스택을 부여합니다",공격력이 45 증가합니다
-Cardcode_031,라이트닝 볼트,Lightning,Normal,1,InflictSE,20,DealDamage,0.5,2,IncreaseAttack,5,Continuous,"감전 20스택을 부여하고, 공격력의 50% 피해를 입힙니다",공격력이 5 증가합니다
-Cardcode_032,컨버젼,Lightning,Normal,1,InflictSE,30,DealDamage,0.6,1,InflictSE,30,TurnEnd,"감전 30스택을 부여하고, 공격력의 60% 피해를 입힙니다",감전 30스택을 부여합니다
+Cardcode_030,영구동토,Ice,Legend,7,DealDamage,1,InflictSE,4,3,IncreaseAttack,45,TurnEnd,"공격력의 100% 피해를 입히고, 
+빙결 4스택을 부여합니다",공격력이 45 증가합니다
+Cardcode_031,라이트닝 볼트,Lightning,Normal,1,InflictSE,20,DealDamage,0.5,2,IncreaseAttack,5,Continuous,"감전 20스택을 부여하고, 
+공격력의 50% 피해를 입힙니다",공격력이 5 증가합니다
+Cardcode_032,컨버젼,Lightning,Normal,1,InflictSE,30,DealDamage,0.6,1,InflictSE,30,TurnEnd,"감전 30스택을 부여하고, 
+공격력의 60% 피해를 입힙니다",감전 30스택을 부여합니다
 Cardcode_033,스파크 샷,Lightning,Normal,2,AddReroll,1,None,0,1,IncreaseAttack,5,Continuous,리롤을 1회 추가합니다,공격력이 5 증가합니다
 Cardcode_034,축전,Lightning,Normal,2,HealMiasma,20,None,0,1,IncreaseAttack,15,TurnEnd,오염도를 20 정화합니다,공격력이 15 증가합니다
-Cardcode_035,과충전,Lightning,Normal,2,InflictSE,30,DealDamage,0.6,3,IncreaseAttack,5,Continuous,"감전 30스택을 부여하고, 공격력의 60% 피해를 입힙니다",공격력이 5 증가합니다
+Cardcode_035,과충전,Lightning,Normal,2,InflictSE,30,DealDamage,0.6,3,IncreaseAttack,5,Continuous,"감전 30스택을 부여하고, 
+공격력의 60% 피해를 입힙니다",공격력이 5 증가합니다
 Cardcode_036,전자기력,Lightning,Normal,2,RecovoerMana,4,None,0,1,IncreaseAttack,15,TurnEnd,마나를 4 회복합니다,공격력이 15 증가합니다
-Cardcode_037,임펄스,Lightning,Normal,3,AddReroll,2,InflictSE,10,1,InflictSE,10,Continuous,"리롤을 2회 추가하고, 감전 10스택을 부여합니다",감전 10스택을 부여합니다
-Cardcode_038,썬더 볼,Lightning,Rare,2,InflictSE,30,DealDamage,0.5,2,IncreaseAttack,25,TurnEnd,"감전 30스택을 부여하고, 공격력의 50% 피해를 입힙니다",공격력이 25 증가합니다
+Cardcode_037,임펄스,Lightning,Normal,3,AddReroll,2,InflictSE,10,1,InflictSE,10,Continuous,"리롤을 2회 추가하고, 
+감전 10스택을 부여합니다",감전 10스택을 부여합니다
+Cardcode_038,썬더 볼,Lightning,Rare,2,InflictSE,30,DealDamage,0.5,2,IncreaseAttack,25,TurnEnd,"감전 30스택을 부여하고, 
+공격력의 50% 피해를 입힙니다",공격력이 25 증가합니다
 Cardcode_039,낙뢰부름,Lightning,Rare,1,RecovoerMana,4,None,0,1,IncreaseAttack,10,Continuous,마나를 4 회복합니다,공격력이 10 증가합니다
-Cardcode_040,제세동,Lightning,Rare,2,InflictSE,40,DealDamage,0.7,1,InflictSE,20,Continuous,"감전 40스택을 부여하고, 공격력의 70% 피해를 입힙니다",감전 20스택을 부여합니다
-Cardcode_041,뇌전의 영역,Lightning,Rare,3,HealMiasma,30,InflictSE,10,1,IncreaseAttack,25,TurnEnd,"오염도를 30 정화하고, 감전 10스택을 부여합니다",공격력이 25 증가합니다
-Cardcode_042,오버클럭,Lightning,Hero,3,InflictSE,50,DealDamage,0.6,2,IncreaseAttack,15,Continuous,"감전 50스택을 부여하고, 공격력의 60% 피해를 입힙니다",공격력이 15 증가합니다
-Cardcode_043,썬더 인퓨전,Lightning,Hero,3,RecovoerMana,6,InflictSE,10,1,InflictSE,50,TurnEnd,"마나를 6 회복하고, 감전 10스택을 부여합니다",감전 50스택을 부여합니다
-Cardcode_044,천뢰벽력,Lightning,Hero,3,AddReroll,3,InflictSE,10,1,IncreaseAttack,15,Continuous,"리롤을 3회 추가하고, 감전 10스택을 부여합니다",공격력이 15 증가합니다
-Cardcode_045,뇌봉전별,Lightning,Legend,7,InflictSE,50,DealDamage,1,4,InflictSE,30,Continuous,"감전 50스택을 부여하고, 공격력의 100% 피해를 입힙니다",감전 30스택을 부여합니다
-Cardcode_046,개척,Grass,Normal,2,DealDamage,0.6,InflictSE,3,2,IncreaseAttack,5,Continuous,"공격력의 60% 피해를 입히고, 중독 3스택을 부여합니다",공격력이 5 증가합니다
-Cardcode_047,풀피리,Grass,Normal,2,DealDamage,0.8,InflictSE,5,1,InflictSE,10,TurnEnd,"공격력의 80% 피해를 입히고, 중독 5스택을 부여합니다",중독 10스택을 부여합니다
+Cardcode_040,제세동,Lightning,Rare,2,InflictSE,40,DealDamage,0.7,1,InflictSE,20,Continuous,"감전 40스택을 부여하고, 
+공격력의 70% 피해를 입힙니다",감전 20스택을 부여합니다
+Cardcode_041,뇌전의 영역,Lightning,Rare,3,HealMiasma,30,InflictSE,10,1,IncreaseAttack,25,TurnEnd,"오염도를 30 정화하고, 
+감전 10스택을 부여합니다",공격력이 25 증가합니다
+Cardcode_042,오버클럭,Lightning,Hero,3,InflictSE,50,DealDamage,0.6,2,IncreaseAttack,15,Continuous,"감전 50스택을 부여하고, 
+공격력의 60% 피해를 입힙니다",공격력이 15 증가합니다
+Cardcode_043,썬더 인퓨전,Lightning,Hero,3,RecovoerMana,6,InflictSE,10,1,InflictSE,50,TurnEnd,"마나를 6 회복하고, 
+감전 10스택을 부여합니다",감전 50스택을 부여합니다
+Cardcode_044,천뢰벽력,Lightning,Hero,3,AddReroll,3,InflictSE,10,1,IncreaseAttack,15,Continuous,"리롤을 3회 추가하고, 
+감전 10스택을 부여합니다",공격력이 15 증가합니다
+Cardcode_045,뇌봉전별,Lightning,Legend,7,InflictSE,50,DealDamage,1,4,InflictSE,30,Continuous,"감전 50스택을 부여하고, 
+공격력의 100% 피해를 입힙니다",감전 30스택을 부여합니다
+Cardcode_046,개척,Grass,Normal,2,DealDamage,0.6,InflictSE,3,2,IncreaseAttack,5,Continuous,"공격력의 60% 피해를 입히고, 
+중독 3스택을 부여합니다",공격력이 5 증가합니다
+Cardcode_047,풀피리,Grass,Normal,2,DealDamage,0.8,InflictSE,5,1,InflictSE,10,TurnEnd,"공격력의 80% 피해를 입히고, 
+중독 5스택을 부여합니다",중독 10스택을 부여합니다
 Cardcode_048,메마름,Grass,Normal,2,AddReroll,1,None,0,1,IncreaseAttack,5,Continuous,리롤을 1회 추가합니다,공격력이 5 증가합니다
 Cardcode_049,분진,Grass,Normal,2,HealMiasma,20,None,0,1,IncreaseAttack,15,TurnEnd,오염도를 20 정화합니다,공격력이 15 증가합니다
-Cardcode_050,독수,Grass,Normal,3,DealDamage,0.6,InflictSE,2,3,IncreaseAttack,5,Continuous,"공격력의 60% 피해를 입히고, 중독 2스택을 부여합니다",공격력이 5 증가합니다
+Cardcode_050,독수,Grass,Normal,3,DealDamage,0.6,InflictSE,2,3,IncreaseAttack,5,Continuous,"공격력의 60% 피해를 입히고, 
+중독 2스택을 부여합니다",공격력이 5 증가합니다
 Cardcode_051,발아,Grass,Normal,2,RecovoerMana,4,None,0,1,IncreaseAttack,15,TurnEnd,마나를 4 회복합니다,공격력이 15 증가합니다
-Cardcode_052,가시덩쿨,Grass,Normal,3,AddReroll,2,InflictSE,1,1,InflictSE,2,Continuous,"리롤을 2회 추가하고, 중독 1스택을 부여합니다",중독 2스택을 부여합니다
-Cardcode_053,청산,Grass,Rare,3,DealDamage,0.7,InflictSE,2,2,IncreaseAttack,25,TurnEnd,"공격력의 70% 피해를 입히고, 중독 2스택을 부여합니다",공격력이 25 증가합니다
-Cardcode_054,호흡마비,Grass,Rare,1,RecovoerMana,3,InflictSE,1,1,IncreaseAttack,10,Continuous,"마나를 3 회복하고, 중독 1스택을 부여합니다",공격력이 10 증가합니다
-Cardcode_055,응급처치,Grass,Rare,3,DealDamage,0.8,InflictSE,2,1,InflictSE,2,Continuous,"공격력의 80% 피해를 입히고, 중독 2스택을 부여합니다",중독 2스택을 부여합니다
+Cardcode_052,가시덩쿨,Grass,Normal,3,AddReroll,2,InflictSE,1,1,InflictSE,2,Continuous,"리롤을 2회 추가하고, 
+중독 1스택을 부여합니다",중독 2스택을 부여합니다
+Cardcode_053,청산,Grass,Rare,3,DealDamage,0.7,InflictSE,2,2,IncreaseAttack,25,TurnEnd,"공격력의 70% 피해를 입히고, 
+중독 2스택을 부여합니다",공격력이 25 증가합니다
+Cardcode_054,호흡마비,Grass,Rare,1,RecovoerMana,3,InflictSE,1,1,IncreaseAttack,10,Continuous,"마나를 3 회복하고, 
+중독 1스택을 부여합니다",공격력이 10 증가합니다
+Cardcode_055,응급처치,Grass,Rare,3,DealDamage,0.8,InflictSE,2,1,InflictSE,2,Continuous,"공격력의 80% 피해를 입히고, 
+중독 2스택을 부여합니다",중독 2스택을 부여합니다
 Cardcode_056,명상,Grass,Rare,3,HealMiasma,30,None,0,1,IncreaseAttack,25,TurnEnd,오염도를 30 정화합니다,공격력이 25 증가합니다
-Cardcode_057,초목의 검,Grass,Hero,4,DealDamage,1.2,InflictSE,4,1,IncreaseAttack,15,Continuous,"공격력의 120% 피해를 입히고, 중독 4스택을 부여합니다",공격력이 15 증가합니다
-Cardcode_058,관통뿌리,Grass,Hero,4,RecovoerMana,8,InflictSE,2,1,InflictSE,15,TurnEnd,"마나를 8 회복하고, 중독 2스택을 부여합니다",중독 15스택을 부여합니다
-Cardcode_059,태초의 나무,Grass,Hero,3,AddReroll,3,InflictSE,5,1,IncreaseAttack,15,Continuous,"리롤을 3회 추가하고, 중독 5스택을 부여합니다",공격력이 15 증가합니다
-Cardcode_060,황금사과,Grass,Legend,7,DealDamage,2,InflictSE,5,2,InflictSE,20,TurnEnd,"공격력의 200% 피해를 입히고, 중독 5스택을 부여합니다",중독 20스택을 부여합니다
+Cardcode_057,초목의 검,Grass,Hero,4,DealDamage,1.2,InflictSE,4,1,IncreaseAttack,15,Continuous,"공격력의 120% 피해를 입히고, 
+중독 4스택을 부여합니다",공격력이 15 증가합니다
+Cardcode_058,관통뿌리,Grass,Hero,4,RecovoerMana,8,InflictSE,2,1,InflictSE,15,TurnEnd,"마나를 8 회복하고, 
+중독 2스택을 부여합니다",중독 15스택을 부여합니다
+Cardcode_059,태초의 나무,Grass,Hero,3,AddReroll,3,InflictSE,5,1,IncreaseAttack,15,Continuous,"리롤을 3회 추가하고, 
+중독 5스택을 부여합니다",공격력이 15 증가합니다
+Cardcode_060,황금사과,Grass,Legend,7,DealDamage,2,InflictSE,5,2,InflictSE,20,TurnEnd,"공격력의 200% 피해를 입히고, 
+중독 5스택을 부여합니다",중독 20스택을 부여합니다
 Cardcode_061,기교,None,Normal,1,DealDamage,0.8,None,0,2,IncreaseAttack,5,Continuous,공격력의 80% 피해를 입힙니다,공격력이 5 증가합니다
 Cardcode_062,재주,None,Normal,1,DealDamage,1,None,0,1,IncreaseAttack,15,TurnEnd,공격력의 100% 피해를 입힙니다,공격력이 15 증가합니다
 Cardcode_063,임시방편,None,Normal,1,AddReroll,1,None,0,1,IncreaseAttack,5,Continuous,리롤을 1회 추가합니다,공격력이 5 증가합니다

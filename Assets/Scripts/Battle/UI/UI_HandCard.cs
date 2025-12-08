@@ -3,49 +3,55 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 // 패의 카드의 ui를 관리할 클래스
-public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDragHandler
+public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDragHandler, IPointerDownHandler, IPointerUpHandler
 {
-    private GameCard slotCard;
-
-
-    public Image ImageUI{get;private set;}
+    public Image image {get;private set;}
+    public RectTransform rect { get; private set; }
 
     Sprite placeHolder;
     Transform canvas;
-    Transform previousParent;
-    RectTransform rect;
-
-    // 슬롯 번호는 0~3. 계산상의 편의를 위해
-    public int SlotIndex { get; private set; }
+    Transform previousParent;    
 
 
     // 카드 사용 시도 이벤트
     // 카드 방향 및 마나 체크하고 가능 여부를 bool로 return
     public event Func<int, bool> OnTryUseCard;
-
     // 카드 플립 시도 이벤트
     // 마나 체크하고 가능 여부를 bool로 return
     public event Func<int, bool> OnTryFlipCard;
 
-    private CardFace _cardFace;
-    public bool canDrag = true;
+    public event Action<GameCard> OnDescriptionOpen;
+    public event Action OnDescriptionClose;
+
+
+    private GameCard slotCard;    
+    private int slotIndex;  // 슬롯 번호는 0~3
+
+    // 입력 이벤트 관련 변수
+    private Coroutine longPressRoutine;
+    private Vector2 pressStartPos;
+    private bool canDrag = true;
+    
+
 
 
     private void Awake()
     {
-        ImageUI = GetComponent<Image>();
+        image = GetComponent<Image>();
 
         canvas = transform.root;
         rect = GetComponent<RectTransform>();
+
     }
 
    
     public void Init(int slotIndex, Sprite placeHolder)
     {
-        SlotIndex = slotIndex;
+        this.slotIndex = slotIndex;
         this.placeHolder = placeHolder;
     }
 
@@ -57,11 +63,11 @@ public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDr
     {
         if(placeHolder != null)
         {
-            ImageUI.sprite = placeHolder;
+            image.sprite = placeHolder;
 
-            Color c = ImageUI.color;
+            Color c = image.color;
             c.a = 0f;
-            ImageUI.color = c;
+            image.color = c;
         }
         
     }
@@ -77,18 +83,17 @@ public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDr
     {
         slotCard = card;
 
-        ImageUI.enabled = true;
-        ImageUI.sprite = card.Card.CardSprite;
+        image.enabled = true;
+        image.sprite = card.Card.CardSprite;
 
-        Color c= ImageUI.color;
+        Color c= image.color;
         c.a = 1f;
-        ImageUI.color = c;
+        image.color = c;
 
 
         HandleDraggable(true);
 
-        _cardFace = card.CardFace;
-        UpdateCardFace(_cardFace);
+        UpdateCardFace(slotCard.CardFace);
     }
 
 
@@ -96,11 +101,11 @@ public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDr
     {
         if (face == CardFace.Upright)
         {
-            rect.transform.localEulerAngles = new Vector3(0, 0, 0);
+            rect.localEulerAngles = new Vector3(0, 0, 0);
         }
         else
         {
-            rect.transform.localEulerAngles = new Vector3(0, 0, 180);
+            rect.localEulerAngles = new Vector3(0, 0, 180);
         }
     }
 
@@ -110,7 +115,7 @@ public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDr
     {
         ResetCardPos(); 
         HandleDraggable(false);
-        ImageUI.sprite = placeHolder;
+        image.sprite = placeHolder;
         rect.localScale = Vector3.one;  
     }
 
@@ -118,14 +123,36 @@ public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDr
     public void HandleDraggable(bool isAble)
     {
         canDrag = isAble;
-        ImageUI.raycastTarget = isAble;
+        image.raycastTarget = isAble;
     }
 
 
-    #region OnDrag
+#region InputEvents
+
+
+
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (!canDrag)
+            return;
+
+        pressStartPos = eventData.position;
+        longPressRoutine = StartCoroutine(LongPressCheck());
+
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        StopLongPress();
+    }
+
+
     // 드래그 시작
     public void OnBeginDrag(PointerEventData eventData)
     {
+        StopLongPress();
+
         if (!canDrag)
             return;
 
@@ -134,7 +161,7 @@ public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDr
         transform.SetParent(canvas);
         transform.SetAsLastSibling();
 
-        ImageUI.raycastTarget = false;
+        image.raycastTarget = false;
 
     }
      
@@ -156,20 +183,60 @@ public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDr
             ResetCardPos();
         }
 
-        ImageUI.raycastTarget = true;
+        image.raycastTarget = true;
+    }
+
+
+    private float longPressTime = 0.4f;
+    private float dragThreshold = 15f;
+    private IEnumerator LongPressCheck()
+    {
+        float timer = 0f;
+
+        while(timer < longPressTime)
+        {
+            Vector2 currPos = Pointer.current.position.ReadValue();
+            float dist = Vector2.Distance(currPos, pressStartPos);
+
+            if (dist > dragThreshold)
+                yield break;
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        // 카드 설명 끄기
+        OnDescriptionOpen?.Invoke(slotCard);
+    }
+
+
+    private void StopLongPress()
+    {
+        if (longPressRoutine != null)
+        {
+            StopCoroutine(longPressRoutine);
+            longPressRoutine = null;
+        }
+
+        // 카드 설명 켜기
+        OnDescriptionClose?.Invoke();
     }
 
     #endregion
 
+
+
+
+
     // 카드를 쓸 수 있는지 체크
     public bool CanUseCard()
     {
-        return OnTryUseCard?.Invoke(SlotIndex) ?? false;
+        return OnTryUseCard?.Invoke(slotIndex) ?? false;
     }
 
     public bool CanFlipCard()
     {
-        return OnTryFlipCard?.Invoke(SlotIndex) ?? false;
+        return OnTryFlipCard?.Invoke(slotIndex) ?? false;
     }
 
     // 패의 카드 뒤집을 시 실행
@@ -180,7 +247,7 @@ public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDr
         rect.localScale *= 1.2f;
         HandleDraggable(false);
 
-        float startRotation = _cardFace == CardFace.Upright ? 180 : 0;
+        float startRotation = slotCard.CardFace == CardFace.Upright ? 180 : 0;
         float targetRotation = startRotation + 180f;
         float time = 0;
 
@@ -195,10 +262,10 @@ public class UI_HandCard : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDr
 
 
             float z = startRotation + (targetRotation - startRotation) * easeOB;
-            rect.transform.localEulerAngles = new Vector3(0, 0, z);
+            rect.localEulerAngles = new Vector3(0, 0, z);
             yield return null;
         }
-        UpdateCardFace(_cardFace);
+        UpdateCardFace(slotCard.CardFace);
         
         yield return new WaitForSeconds(0.2f);
         rect.localScale = startSize;

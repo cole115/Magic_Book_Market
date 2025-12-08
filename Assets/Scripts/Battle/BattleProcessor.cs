@@ -91,6 +91,7 @@ public class BattleProcessor
         _rerollCount = 1;
         CurrMana = _maxMana;
         OnMiasmaChanged?.Invoke(CurrMiasma, 100);
+        OnRerollChanged?.Invoke(_rerollCount);
 
         Debug.Log($"현재 마나 : {CurrMana}");
     }

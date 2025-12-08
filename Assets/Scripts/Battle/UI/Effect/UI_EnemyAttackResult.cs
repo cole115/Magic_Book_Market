@@ -25,18 +25,24 @@ public class UI_EnemyAttackResult : MonoBehaviour
 
 
     // 카드 깨짐 연출(나중에 애니메이터로 깨지는 형태 연출)
-    public IEnumerator OnBreak(Vector3 cardPos, Sprite cardSprite)
+    public IEnumerator OnBreak(UI_HandCard handCardUI)
     {
         //Debug.Log("파괴");
-        BrokenCard.transform.position = cardPos;
+        RectTransform rect = BrokenCard.GetComponent<RectTransform>();
+
+
+        rect.position = handCardUI.rect.position;
+        rect.rotation = handCardUI.rect.rotation;
+
         BrokenCard.SetActive(true);        
         var cardImage = BrokenCard.GetComponent<Image>();
 
-        cardImage.sprite = cardSprite;
+        cardImage.sprite = handCardUI.image.sprite;
         PlayAudio(1);
         yield return new WaitForSeconds(0.3f);
 
-        cardSprite = null;
+        // 카드 슬롯의 카드 뺌
+        handCardUI.image.sprite = null;
         BrokenCard.SetActive(false);
 
     }

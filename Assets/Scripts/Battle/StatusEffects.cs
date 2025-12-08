@@ -97,7 +97,7 @@ public class SE_Freeze : StatusEffectBase
 // 독 대미지 후 30퍼센트 감소
 public class SE_Poison : StatusEffectBase
 {
-    public override StatusEffectType Type => StatusEffectType.Freeze;
+    public override StatusEffectType Type => StatusEffectType.Poison;
 
     public override void OnTurnEnd(EffectExecutor executor)
     {

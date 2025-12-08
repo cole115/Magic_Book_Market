@@ -49,7 +49,7 @@ public class UI_CardExecuteArea : MonoBehaviour, IDropHandler
         var uiCard = eventData.pointerDrag?.GetComponent<UI_HandCard>();
         if (uiCard == null) return;
 
-        handSprite = uiCard.ImageUI.sprite;
+        handSprite = uiCard.image.sprite;
 
 
         // 효과를 쓸 수 있는지 체크. 가능하다면 사용

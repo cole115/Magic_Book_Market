@@ -24,7 +24,7 @@ MonoBehaviour:
     - Type: 2
       Value: 4
     UprDescription: "\uACF5\uACA9\uB825\uC758 100% \uD53C\uD574\uB97C \uC785\uD788\uACE0,
-      \uBE59\uACB0 4\uC2A4\uD0DD\uC744 \uBD80\uC5EC\uD569\uB2C8\uB2E4"
+      \n\uBE59\uACB0 4\uC2A4\uD0DD\uC744 \uBD80\uC5EC\uD569\uB2C8\uB2E4"
     AttackCount: 3
     Trigger: 1
     RevEffectInfos:

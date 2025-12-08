@@ -14,7 +14,6 @@ public class BattleUIPresenter : MonoBehaviour
 {
     [Header("Hand")]
     [SerializeField] UI_HandCard[] handCardsUI = new UI_HandCard[4];
-    UI_DescriptionOpener[] openers = new UI_DescriptionOpener[4];
 
     [Header("Canvas")]
     [SerializeField] UI_ResultCanvas resultCanvas;
@@ -41,6 +40,7 @@ public class BattleUIPresenter : MonoBehaviour
     [Header("Etc")]
     [SerializeField] UI_MiasmaBar miasmaBar;
     [SerializeField] UI_EnemyHpBar enemyHpBar;
+    [SerializeField] UI_EnemySE enemySE;
     [SerializeField] UI_AttackPreviewArrows previewArrows;
     [SerializeField] Sprite cardPlaceHolder;
 
@@ -81,7 +81,7 @@ public class BattleUIPresenter : MonoBehaviour
     public void InitUIPresenter()
     {
         ShowCurrentTurn();
-        SubscribeActions();
+        SubscribeHandCards();
         SubscribeAttackPreview();
         SubscribeUIs();
         MasterBattleManager.Instance.CardController.HandCards.OnHandCardChanged += RefreshAllHandUi;
@@ -112,7 +112,7 @@ public class BattleUIPresenter : MonoBehaviour
 
     // 카드 플립을 onCardFilpAttempt에 구독
     // 람다 캡쳐 현상 주의
-    private void SubscribeActions()
+    private void SubscribeHandCards()
     {
         for (int i = 0; i < 4; i++)
         {
@@ -120,22 +120,28 @@ public class BattleUIPresenter : MonoBehaviour
             UI_HandCard cardUI = handCardsUI[index];
 
 
-            cardUI.OnTryFlipCard += (SlotIndex) =>
+            cardUI.OnTryFlipCard += (slotIndex) =>
             {
-                bool canFlip = MasterBattleManager.Instance.CardController.TryFlipCard(SlotIndex);
+                bool canFlip = MasterBattleManager.Instance.CardController.TryFlipCard(slotIndex);
                 return canFlip;
             };
 
-            cardUI.OnTryUseCard += (SlotIndex) =>
+            cardUI.OnTryUseCard += (slotIndex) =>
             {
-                bool canUse = MasterBattleManager.Instance.CardController.TryUseCard(SlotIndex);
+                bool canUse = MasterBattleManager.Instance.CardController.TryUseCard(slotIndex);
                 return canUse;
             };
 
-            // 리롤 시도도 추가
+            cardUI.OnDescriptionOpen += (card) =>
+            {
+                descriptionCanvas.ShowDescription(card);
+            };
+
+            cardUI.OnDescriptionClose += () =>
+            {
+                descriptionCanvas.HideDescription();
+            };
         }
-
-
     }
 
     private void SubscribeAttackPreview()
@@ -159,6 +165,7 @@ public class BattleUIPresenter : MonoBehaviour
     private void SubscribeUIs()
     {
         MasterBattleManager.Instance.CurrEnemy.OnEnemyHealthChanged += ShowEnemyHp;
+        MasterBattleManager.Instance.CurrEnemy.OnSERefreshed += ShowEnemySE;
         MasterBattleManager.Instance.Processor.OnManaChanged += ShowCurrentMana;
         MasterBattleManager.Instance.Processor.OnMiasmaChanged += ShowCurrentMiasma;
         MasterBattleManager.Instance.Processor.OnRerollChanged += ShowCurrentReroll;
@@ -212,8 +219,7 @@ public class BattleUIPresenter : MonoBehaviour
         Debug.Log("파괴");
         var targetCard = handCardsUI[dir];
 
-        StartCoroutine(enemyAttackResult.OnBreak(
-            targetCard.transform.position,targetCard.ImageUI.sprite));
+        StartCoroutine(enemyAttackResult.OnBreak(targetCard));
     }
 
     // 적 공격 결과 처리. 카드 파괴 시에는 ShowCardBreak 쪽으로
@@ -285,6 +291,11 @@ public class BattleUIPresenter : MonoBehaviour
     private void ShowEnemyHp(int currHp, int maxHp)
     {
         enemyHpBar.ShowEnemyHp(currHp, maxHp);
+    }
+
+    private void ShowEnemySE(Dictionary<StatusEffectType, int> effects)
+    {
+        enemySE.ShowSE(effects);
     }
 
     private void ShowCurrentReroll(int reroll)

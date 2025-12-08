@@ -23,7 +23,7 @@ MonoBehaviour:
       Value: 2
     - Type: 2
       Value: 2
-    UprDescription: "\uB9AC\uB864\uC744 2\uD68C \uCD94\uAC00\uD558\uACE0, \uD654\uC0C1
+    UprDescription: "\uB9AC\uB864\uC744 2\uD68C \uCD94\uAC00\uD558\uACE0, \n\uD654\uC0C1
       2\uC2A4\uD0DD\uC744 \uBD80\uC5EC\uD569\uB2C8\uB2E4"
     AttackCount: 1
     Trigger: 0

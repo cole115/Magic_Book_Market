@@ -41,7 +41,8 @@ public class Enemy : MonoBehaviour
     public bool isFrozen = false;   // 빙결에 의한 공격 차단
 
     public event Action<int,int> OnEnemyHealthChanged;
-    public event Action<StatusEffectType, int> OnEnemySEActivated;
+    public event Action<Dictionary<StatusEffectType, int>> OnSERefreshed;       // 현재 상태이상 목록 갱신
+    public event Action<StatusEffectType, int> OnEnemySEActivated;  // 발동한 상태이상 대미지
 
     
     public void SetEnemy(EnemySO enemyData)
@@ -104,10 +105,9 @@ public class Enemy : MonoBehaviour
 
     public void TakeSEDamage(StatusEffectType type, int amount)
     {
-
         //Debug.Log($"적 체력 {EnemyCurrHealth},상태이상 대미지 {amount}");
         EnemyCurrHealth -= amount;
-        OnEnemySEActivated?.Invoke(type, amount);
+        OnEnemySEActivated?.Invoke(type, amount);        
         OnEnemyHealthChanged?.Invoke(EnemyCurrHealth, enemyMaxHealth);  
 
         if (EnemyCurrHealth <= 0)
@@ -138,7 +138,31 @@ public class Enemy : MonoBehaviour
             newEffect.AddStack(amount);
             inflictedSE.Add(seType, newEffect);
         }
+
+        RefreshSEDic();
     }
+
+
+    // 0스택이 된 상태이상 정리
+    // 상태이상 UI 갱신
+    public void RefreshSEDic()
+    {
+        foreach (var key in inflictedSE
+            .Where(p => p.Value.Stack <= 0)  // 스택이 0 이하인 효과
+            .Select(p => p.Key)
+            .ToList())
+        {
+            inflictedSE.Remove(key);
+        }
+
+        var seDic = inflictedSE.ToDictionary(
+            pair => pair.Key,
+            pair => pair.Value.Stack
+            );
+
+        OnSERefreshed?.Invoke(seDic);
+    }
+
 }
 
 

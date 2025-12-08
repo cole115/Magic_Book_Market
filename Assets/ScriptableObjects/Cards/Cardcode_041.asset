@@ -23,7 +23,7 @@ MonoBehaviour:
       Value: 30
     - Type: 2
       Value: 10
-    UprDescription: "\uC624\uC5FC\uB3C4\uB97C 30 \uC815\uD654\uD558\uACE0, \uAC10\uC804
+    UprDescription: "\uC624\uC5FC\uB3C4\uB97C 30 \uC815\uD654\uD558\uACE0, \n\uAC10\uC804
       10\uC2A4\uD0DD\uC744 \uBD80\uC5EC\uD569\uB2C8\uB2E4"
     AttackCount: 1
     Trigger: 1

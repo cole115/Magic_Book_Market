@@ -120,6 +120,8 @@ public class TurnManager : MonoBehaviour
             }
         }
 
+        var enemy = MasterBattleManager.Instance.CurrEnemy;
+        enemy.RefreshSEDic();
     }
 
     // 적 턴 시작시

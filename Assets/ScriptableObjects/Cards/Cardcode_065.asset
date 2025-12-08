@@ -28,4 +28,4 @@ MonoBehaviour:
     - Type: 1
       Value: 5
     RevDescription: "\uACF5\uACA9\uB825\uC774 5 \uC99D\uAC00\uD569\uB2C8\uB2E4"
-  CardSprite: {fileID: 0}
+  CardSprite: {fileID: 21300000, guid: 5013cc9582c05d540aee38375fa110d2, type: 3}
