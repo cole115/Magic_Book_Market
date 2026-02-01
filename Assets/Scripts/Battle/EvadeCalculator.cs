@@ -1,6 +1,7 @@
 using System.Linq;
 using UnityEngine;
 
+// 회피 결과
 public struct EvadeResult
 {
     public bool IsEvaded;

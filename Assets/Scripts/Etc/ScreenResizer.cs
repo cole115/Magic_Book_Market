@@ -29,9 +29,7 @@ public class ScreenResizer : MonoBehaviour
 
         Screen.SetResolution(targetWidth, targetHeight, FullScreenMode.Windowed);
 
-         
-
-    
+             
     }
 
 

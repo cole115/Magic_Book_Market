@@ -23,7 +23,7 @@ public class UI_EnemySE : MonoBehaviour
 
     }
 
-
+    // 적 상태이상 UI로 보여줌
     public void ShowSE(Dictionary<StatusEffectType, int> effects)
     {
         foreach (var pair in iconMap)
@@ -31,6 +31,8 @@ public class UI_EnemySE : MonoBehaviour
             StatusEffectType type = pair.Key;
             GameObject icon = pair.Value;
 
+            // 특정 상태이상 스택이 0보다 크면 아이콘 적용.
+            // 아니면 아이콘 비활성화
             if (effects.TryGetValue(type, out var value) && value > 0)
             {
                 ApplyIcon(icon, value);
@@ -43,6 +45,7 @@ public class UI_EnemySE : MonoBehaviour
 
     }
 
+    // 아이콘 및 스택 활성화
     private void ApplyIcon(GameObject icon, int value)
     {
         if (!icon.activeSelf)

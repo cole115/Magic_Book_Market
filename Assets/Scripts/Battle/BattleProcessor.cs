@@ -43,12 +43,7 @@ public class BattleProcessor
     // 적 스펙(참조)-----------
     private Enemy _currEnemy;
 
-    // 나중에 뺌
-    public int enemyMaxHp { get; set; }
-    int _enemyCurrHp;
-
-
-
+    // 이벤트---------------
     public event Action<List<AttackInstance>> OnEnemyAttackPreview; // 적 공격 예고
     public event Action<int> OnEnemyTryAttack;                      // 적 공격 시도(UI용)
     public event Action<int> OnEnemyAttackEffect;                   // 적 공격 이펙트

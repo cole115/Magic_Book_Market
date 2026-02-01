@@ -103,6 +103,7 @@ public class Enemy : MonoBehaviour
         
     }
 
+    // 상태이상 대미지
     public void TakeSEDamage(StatusEffectType type, int amount)
     {
         //Debug.Log($"적 체력 {EnemyCurrHealth},상태이상 대미지 {amount}");
@@ -110,22 +111,26 @@ public class Enemy : MonoBehaviour
         OnEnemySEActivated?.Invoke(type, amount);        
         OnEnemyHealthChanged?.Invoke(EnemyCurrHealth, enemyMaxHealth);  
 
+        // 체력이 0 이하 시 전투 종료
         if (EnemyCurrHealth <= 0)
         {
-            MasterBattleManager.Instance.TurnManager.BattleOver();
+            MasterBattleManager.Instance.TurnManager.BattleOver();  
         }
 
        
     }
 
+    // 상태이상 대미지
     public void InflictSE(StatusEffectType seType, int amount)
     {
+        // 이미 있는 상태이상이면 스택 증가
         if (inflictedSE.TryGetValue(seType, out IStatusEffect existingSE))
         {
             existingSE.AddStack(amount);
         }
         else
         {
+            // 없으면 추가
             IStatusEffect newEffect = seType switch
             {
                 StatusEffectType.Burn => new SE_Burn(),
@@ -138,7 +143,6 @@ public class Enemy : MonoBehaviour
             newEffect.AddStack(amount);
             inflictedSE.Add(seType, newEffect);
         }
-
         RefreshSEDic();
     }
 
@@ -167,7 +171,7 @@ public class Enemy : MonoBehaviour
 
 
 
-
+// 적 패턴 핸들러
 public class Enemy_PatternHandler
 {
     private Enemy_Pattern nextPattern;
@@ -213,7 +217,7 @@ public class Enemy_PatternHandler
 
     }
 
-
+    // 다음에 적이 쓸 패턴 정보
     public List<AttackInstance> PrepareNextPattern()
     {
         nextPattern = GetRandomPattern();

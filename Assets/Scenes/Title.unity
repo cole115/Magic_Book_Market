@@ -128,6 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 331346717}
+  - component: {fileID: 331346719}
   - component: {fileID: 331346716}
   - component: {fileID: 331346715}
   - component: {fileID: 331346718}
@@ -235,7 +236,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -256,6 +257,19 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &331346719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331346714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e501238a3c71f9478600515c329b883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetAspect: 0.5625
 --- !u!1 &465809307
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,7 +455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1228151351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,6 +468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d00e210e4a3ec428d6acec5e26a92f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screenScale: 0.7
 --- !u!4 &1228151352
 Transform:
   m_ObjectHideFlags: 0

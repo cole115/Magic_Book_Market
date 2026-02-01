@@ -24,6 +24,7 @@ public class UI_AttackPreviewArrows : MonoBehaviour
         ResetPreview();
     }
 
+    // 공격 예고
     public void PreviewEnemyAttacks(List<AttackInstance> attackInfo)
     {
         ResetPreview();
